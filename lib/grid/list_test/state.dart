@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:fish_redux/fish_redux.dart';
-import 'package:my_flutter/grid/ListTest/Item/state.dart';
+import 'package:my_flutter/grid/list_test/item/state.dart';
 import 'package:my_flutter/store/state.dart';
 
 class ListTestState implements GlobalBaseState, Cloneable<ListTestState> {

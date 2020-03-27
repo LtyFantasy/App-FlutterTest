@@ -1,5 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:my_flutter/grid/ListTest/adapter.dart';
+import 'package:my_flutter/grid/list_test/adapter.dart';
 
 import 'effect.dart';
 import 'reducer.dart';

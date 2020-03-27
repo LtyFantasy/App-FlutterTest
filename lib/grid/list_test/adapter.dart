@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:my_flutter/grid/ListTest/Item/component.dart';
-import 'package:my_flutter/grid/ListTest/Item/state.dart';
-import 'package:my_flutter/grid/ListTest/state.dart';
+import 'package:my_flutter/grid/list_test/item/component.dart';
+import 'package:my_flutter/grid/list_test/item/state.dart';
+import 'package:my_flutter/grid/list_test/state.dart';
 
 class ListTestAdapter extends DynamicFlowAdapter<ListTestState> {
   ListTestAdapter()

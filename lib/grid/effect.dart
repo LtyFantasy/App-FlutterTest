@@ -1,6 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart' hide Action;
 import 'package:flutter/widgets.dart' hide Action;
+import 'package:my_flutter/common_widget/arrow_message_alert.dart';
 import 'package:my_flutter/route_path.dart';
 import 'package:my_flutter/store/action.dart';
 import 'package:my_flutter/store/store.dart';
@@ -31,9 +32,11 @@ void _onGridTapped(Action action, Context<GridState> ctx) {
         RoutePath.ListTest, arguments: {"index": action.payload});
   }
   else if (action.payload == 2) {
-    GlobalStore.store.dispatch(GlobalActionCreator.onChangeThemeColor(Colors.red));
+
+    Navigator.of(ctx.context).pushNamed(RoutePath.ContainerTest);
   }
   else {
-    GlobalStore.store.dispatch(GlobalActionCreator.onChangeThemeColor(Colors.green));
+
+    ArrowMessageAlert.show(ctx.context);
   }
 }

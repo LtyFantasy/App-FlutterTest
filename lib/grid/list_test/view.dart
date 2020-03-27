@@ -1,6 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter/grid/ListTest/adapter.dart';
+import 'package:my_flutter/grid/list_test/adapter.dart';
 
 import 'state.dart';
 
