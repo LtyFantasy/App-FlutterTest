@@ -1,10 +1,17 @@
-import 'package:fish_redux/fish_redux.dart';
+import 'dart:ui';
 
-class EntranceState implements Cloneable<EntranceState> {
+import 'package:fish_redux/fish_redux.dart';
+import 'package:my_flutter/store/state.dart';
+
+class EntranceState implements GlobalBaseState, Cloneable<EntranceState> {
+  
+  @override
+  Color themeColor;
 
   @override
   EntranceState clone() {
-    return EntranceState();
+    return EntranceState()
+      ..themeColor = themeColor;
   }
 }
 

@@ -1,5 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/cupertino.dart' hide Action;
+import 'package:my_flutter/route_path.dart';
 import 'action.dart';
 import 'state.dart';
 
@@ -14,5 +15,5 @@ void _onAction(Action action, Context<EntranceState> ctx) {
 }
 
 void _onOpenGrid(Action action, Context<EntranceState> ctx) {
- Navigator.of(ctx.context).pushNamed("grid_page", arguments: null);
+ Navigator.of(ctx.context).pushNamed(RoutePath.Grid, arguments: null);
 }

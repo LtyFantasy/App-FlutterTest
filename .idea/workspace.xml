@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="185e79d7-8fb2-42de-9bae-54700064f6d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/App-FlutterTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-FlutterTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/action.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/component.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/effect.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/reducer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/Item/view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grid/ListTest/adapter.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/route_path.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/store/action.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/store/reducer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/store/state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/store/store.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/entrance/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/entrance/effect.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/entrance/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/entrance/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/entrance/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/entrance/view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/action.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/effect.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/reducer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/reducer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/ListTest/view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/action.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/effect.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/view.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +41,13 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -28,11 +59,18 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZbSWsxmHS5Wd6Lw7dmmJkWkX6G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -78,5 +116,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

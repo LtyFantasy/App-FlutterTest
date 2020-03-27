@@ -9,6 +9,7 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     appBar: AppBar(
       title: Text("GridPage"),
+      backgroundColor: state.themeColor,
     ),
     body: GridView.count(
       crossAxisCount: 2,
@@ -23,7 +24,7 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
             child: InkWell(
               splashColor: Colors.blue.withAlpha(100),
               onTap: (){
-
+                  dispatch(GridActionCreator.onGridTapped(index + 1));
               },
               child: Container(
                 width: 200,

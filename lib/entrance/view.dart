@@ -10,6 +10,7 @@ Widget buildView(EntranceState state, Dispatch dispatch, ViewService viewService
 
     appBar: AppBar(
       title: Text("EntrancePage"),
+      backgroundColor: state.themeColor,
     ),
     body: Container(
 

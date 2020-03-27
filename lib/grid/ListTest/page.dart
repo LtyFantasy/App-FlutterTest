@@ -1,4 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:my_flutter/grid/ListTest/adapter.dart';
 
 import 'effect.dart';
 import 'reducer.dart';
@@ -13,7 +14,7 @@ class ListTestPage extends Page<ListTestState, Map<String, dynamic>> {
             reducer: buildReducer(),
             view: buildView,
             dependencies: Dependencies<ListTestState>(
-                adapter: null,
+                adapter: NoneConn<ListTestState>() + ListTestAdapter(),
                 slots: <String, Dependent<ListTestState>>{
                 }),
             middleware: <Middleware<ListTestState>>[
