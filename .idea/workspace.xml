@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="185e79d7-8fb2-42de-9bae-54700064f6d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common_widget/arrow_message_alert.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/action.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/effect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/reducer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/reducer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/Item/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/item/view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/action.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/adapter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/adapter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/effect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/reducer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/reducer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/ListTest/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/effect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/route_path.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/route_path.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/container_test/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/container_test/view.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +50,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/grid/container_test/view.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="405">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/rendering/box.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-315">
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -290,7 +279,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" />
@@ -607,10 +596,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/rendering/box.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/grid/container_test/view.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="405">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>

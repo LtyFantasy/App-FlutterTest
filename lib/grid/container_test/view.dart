@@ -12,7 +12,10 @@ Widget buildView(ContainerTestState state, Dispatch dispatch, ViewService viewSe
     ),
     body: Container(
       padding: EdgeInsets.all(20.0),
-      margin: EdgeInsets.all(12.0),
+      margin: EdgeInsets.fromLTRB(50,12,100,50),
+      constraints: BoxConstraints(
+        maxHeight: 200
+      ),
       child: Column(
         children: <Widget>[
           Text(
