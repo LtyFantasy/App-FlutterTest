@@ -37,6 +37,8 @@ void _onGridTapped(Action action, Context<GridState> ctx) {
   }
   else {
 
-    ArrowMessageAlert.show(ctx.context);
+    ArrowMessageAlert.show(ctx.context, "这是你关注的好友，他已经恢复你了，赶快去联系吧，这样就能愉快的交流了。", callback: (){
+      print("点击了Ok");
+    });
   }
 }
