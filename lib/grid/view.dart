@@ -6,6 +6,8 @@ import 'state.dart';
 
 Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
   
+  Offset tapPosition;
+  
   return Scaffold(
     appBar: AppBar(
       title: Text("GridPage"),
@@ -23,8 +25,11 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
             color: Colors.lightBlueAccent,
             child: InkWell(
               splashColor: Colors.blue.withAlpha(100),
+              onTapDown: (TapDownDetails details) {
+                tapPosition = details.globalPosition;
+              },
               onTap: (){
-                  dispatch(GridActionCreator.onGridTapped(index + 1));
+                  dispatch(GridActionCreator.onGridTapped(index + 1, tapPosition));
               },
               child: Container(
                 width: 200,

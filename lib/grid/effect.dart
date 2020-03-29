@@ -3,8 +3,6 @@ import 'package:flutter/material.dart' hide Action;
 import 'package:flutter/widgets.dart' hide Action;
 import 'package:my_flutter/common_widget/arrow_message_alert.dart';
 import 'package:my_flutter/route_path.dart';
-import 'package:my_flutter/store/action.dart';
-import 'package:my_flutter/store/store.dart';
 import 'action.dart';
 import 'state.dart';
 
@@ -25,20 +23,27 @@ void _onInit(Action action, Context<GridState> ctx) {
 }
 
 void _onGridTapped(Action action, Context<GridState> ctx) {
+  
+  int index = action.payload["index"];
+  Offset offset = action.payload["offset"];
 
-  if (action.payload == 1) {
+  if (index == 1) {
 
     Navigator.of(ctx.context).pushNamed(
-        RoutePath.ListTest, arguments: {"index": action.payload});
+        RoutePath.ListTest, arguments: {"index": index});
   }
-  else if (action.payload == 2) {
+  else if (index == 2) {
 
     Navigator.of(ctx.context).pushNamed(RoutePath.ContainerTest);
   }
   else {
 
-    ArrowMessageAlert.show(ctx.context, "这是你关注的好友，他已经恢复你了，赶快去联系吧，这样就能愉快的交流了。", callback: (){
-      print("点击了Ok");
-    });
+      ArrowMessageAlert.show(
+          context:ctx.context,
+          text:"Respond to his selfie challenge and talk to him for free",
+          startPoint: offset,
+          callback: (){
+            print("点击了Ok");
+      });
   }
 }

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="185e79d7-8fb2-42de-9bae-54700064f6d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/common_widget/arrow_message_alert.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widget/arrow_message_alert.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/action.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/grid/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/effect.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/view.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,19 +28,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>_transitionBuilder</find>
-      <find>ListTest/Item</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
   </component>
   <component name="ProjectId" id="1ZbSWsxmHS5Wd6Lw7dmmJkWkX6G" />
   <component name="ProjectLevelVcsManager">

@@ -1,4 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:flutter/widgets.dart' hide Action;
 
 
 enum GridAction {
@@ -17,7 +18,7 @@ class GridActionCreator {
     return const Action(GridAction.loadData);
   }
 
-  static Action onGridTapped(int index) {
-    return Action(GridAction.gridTapped, payload: index);
+  static Action onGridTapped(int index, Offset offset) {
+    return Action(GridAction.gridTapped, payload: {"index" : index, "offset" : offset});
   }
 }
