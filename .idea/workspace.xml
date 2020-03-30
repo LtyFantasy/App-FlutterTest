@@ -7,9 +7,7 @@
     <list default="true" id="185e79d7-8fb2-42de-9bae-54700064f6d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/common_widget/arrow_message_alert.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widget/arrow_message_alert.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/action.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/grid/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/effect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/view.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

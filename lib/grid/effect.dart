@@ -41,6 +41,7 @@ void _onGridTapped(Action action, Context<GridState> ctx) {
       ArrowMessageAlert.show(
           context:ctx.context,
           text:"Respond to his selfie challenge and talk to him for free",
+          //text: "test file",
           startPoint: offset,
           callback: (){
             print("点击了Ok");

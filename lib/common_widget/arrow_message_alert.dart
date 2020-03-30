@@ -47,27 +47,49 @@ class _ArrowMessageAlert extends StatelessWidget {
     final Offset startPoint;
     final ArrowMessageAlertCallback callback;
     
+    // 对话框上的箭头
     static const double arrowWidth = 30.0;
     static const double arrowHeight = 15.0;
-    static const double maxWidth = 305.0;
+
+    // 对话框
     static const double lrMargin = 12.0;
+    static const double padding = 20.0;
+    static const double maxWidth = 305.0;
+    static const double minWidth = 200.0;
     static const double containerCornerRadius = 10.0;
 
     _ArrowMessageAlert({this.text, this.startPoint, this.callback});
     
     @override
     Widget build(BuildContext context) {
+    
+        TextStyle style = TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
+        final TextPainter textPainter = TextPainter(
+            text: TextSpan(text: text, style: style),
+            maxLines: 1,
+            textDirection: TextDirection.ltr)
+            ..layout(minWidth: 0, maxWidth: double.infinity);
+
+        // 容器宽度计算
+        double containerWidth = textPainter.size.width + padding*2;
+        if (containerWidth > maxWidth) {
+            containerWidth = maxWidth;
+        }
+        else if (containerWidth < minWidth) {
+            containerWidth = minWidth;
+        }
         
         return Container(
             alignment: Alignment.topLeft,
             child: Stack(
                 children: <Widget>[
                     _createPositioned(
+                        containerWidth: containerWidth,
                         startPoint: startPoint,
                         child: Container(
                             constraints: BoxConstraints(
                                 maxWidth: maxWidth,
-                                minWidth: 50
+                                minWidth: minWidth,
                             ),
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -75,9 +97,10 @@ class _ArrowMessageAlert extends StatelessWidget {
                                     Radius.circular(containerCornerRadius)
                                 )
                             ),
-                            padding: EdgeInsets.all(20),
+                            padding: EdgeInsets.all(padding),
                             child: _createDialogContainer(
                                 context: context,
+                                containerWidth: containerWidth,
                                 text: text,
                                 callback: callback
                             ),
@@ -92,27 +115,27 @@ class _ArrowMessageAlert extends StatelessWidget {
     /// 如果在屏幕的上半部分，箭头朝上
     /// 如果在屏幕的下半部分，箭头朝下
     /// 箭头尽可能的指向点击位置，但是因为左右边距的限制，最左或者最右可能无法完美指向
-    Positioned _createPositioned ({@required Offset startPoint, @required Widget child}) {
-        
+    Positioned _createPositioned ({@required double containerWidth, @required Offset startPoint, @required Widget child}) {
+    
         final MediaQueryData mediaQueryData = MediaQueryData.fromWindow(window);
         final double width = mediaQueryData.size.width - lrMargin*2;
         final double height = mediaQueryData.size.height;
         final double safeTop = mediaQueryData.padding.top;
         final double safeBottom = mediaQueryData.padding.bottom;
         
-        // 计算容器偏移量
+        // 容器偏移量计算
         Offset containerOffset;
-        if (startPoint.dx < lrMargin + maxWidth / 2) {
+        if (startPoint.dx < lrMargin + containerWidth / 2) {
             containerOffset = Offset(lrMargin, startPoint.dy);
         }
-        else if (startPoint.dx > width - (lrMargin + maxWidth / 2)) {
-            containerOffset = Offset(width - maxWidth + lrMargin, startPoint.dy);
+        else if (startPoint.dx > width - (lrMargin + containerWidth / 2)) {
+            containerOffset = Offset(width - containerWidth + lrMargin, startPoint.dy);
         }
         else {
-            containerOffset = Offset(startPoint.dx - maxWidth / 2, startPoint.dy);
+            containerOffset = Offset(startPoint.dx - containerWidth / 2, startPoint.dy);
         }
 
-        // 计算箭头水平偏移量
+        // 箭头水平偏移量计算
         // 注意，箭头的偏移量是建立在容器已经偏移的基础之上的
         double arrowDx = startPoint.dx - containerOffset.dx - arrowWidth / 2;
         if (arrowDx < lrMargin + containerCornerRadius) {
@@ -164,6 +187,7 @@ class _ArrowMessageAlert extends StatelessWidget {
                 bottom: height - containerOffset.dy - safeBottom,
                 left: containerOffset.dx,
                 child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: widgets
                 ),
@@ -175,8 +199,12 @@ class _ArrowMessageAlert extends StatelessWidget {
     /// 创建对话框
     Widget _createDialogContainer({
         @required BuildContext context,
+        @required double containerWidth,
         @required String text,
         @required ArrowMessageAlertCallback callback}) {
+        
+        final double buttonWidth = 65.0;
+        final leftPadding = containerWidth - buttonWidth - (padding*2);
         
         return Column(
             mainAxisSize: MainAxisSize.min,
@@ -191,13 +219,13 @@ class _ArrowMessageAlert extends StatelessWidget {
                             fontSize: 16,
                             color: Colors.black,
                             decoration: TextDecoration.none,
-                            fontWeight: FontWeight.normal
+                            fontWeight: FontWeight.normal,
                         ),
                     ),
                 ),
                 // 按钮容器
                 Container(
-                    alignment: Alignment.centerRight,
+                    padding: EdgeInsets.only(left: leftPadding),
                     child:GestureDetector(
                         child: Container(
                             width: 65.0,
