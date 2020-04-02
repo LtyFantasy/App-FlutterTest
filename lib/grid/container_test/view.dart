@@ -1,6 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter/grid/container_test/widgets/challenge_prepare.dart';
 import 'package:my_flutter/grid/container_test/widgets/challenge_swiper.dart';
 import 'dart:ui';
 
@@ -66,50 +67,15 @@ class _ChallengeMainWidgetState extends State<_ChallengeMainWidget> {
 			return _createChallengeWidget(state: widget.state);
 		}
     	else {
-    		return _createChallengePrepareWidget(
-				animationDone: () {
+    		return ChallengePrepare(
+				loadingDoneCallback: () {
 					setState(() {
-					  	widget.isPrepareDone = true;
+					  	//widget.isPrepareDone = true;
 					});
 				}
 			);
 		}
     }
-}
-
-Widget _createChallengePrepareWidget ({Function animationDone}) {
-	
-	MediaQueryData mediaQueryData = MediaQueryData.fromWindow(window);
-	double cardWidth = mediaQueryData.size.width * 0.75;
-
-	return Stack(
-		alignment: Alignment.topCenter,
-		children: <Widget>[
-			Positioned(
-				top: 140,
-				child: Center(
-					child: Text(
-						"Preparing for your challenge",
-						style: TextStyle(
-							fontSize: 20,
-							color: Colors.black,
-						),
-					),
-				),
-			),
-			Positioned(
-				top: 90,
-				height: cardWidth + 50,
-				child: FlareActor(
-					"asset/flare/WooPlusWhenIthemeLoading.flr",
-					animation: "Untitled",
-					alignment: Alignment.topCenter,
-					sizeFromArtboard: true,
-					callback: (String name) => animationDone(),
-				),
-			)
-		],
-	);
 }
 
 /// 挑战卡片选择Widget
