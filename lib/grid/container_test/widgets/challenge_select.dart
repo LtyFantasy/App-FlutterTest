@@ -11,6 +11,9 @@ class ChallengeSelect extends StatefulWidget {
     
     /// Choose点击事件
     final Function(int) chooseTapped;
+    
+    /// 动画阶段
+    int animationStage;
 
     /// state对象
     _ChallengeSelectState state;
@@ -20,9 +23,13 @@ class ChallengeSelect extends StatefulWidget {
         @required this.challengeItems,
         this.chooseTapped,
     }): assert(challengeItems != null, "[ChallengeSelect] challengeItems can't be null"),
-        super(key: key);
+        super(key: key) {
+        
+        animationStage = 0;
+    }
     
     startAnimation() {
+        animationStage = 0;
         state.startAnimation();
     }
     
@@ -48,10 +55,27 @@ class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderSt
     
         super.initState();
         
-        animationController = AnimationController(duration: Duration(milliseconds:300), vsync: this);
-        CurvedAnimation curve = CurvedAnimation(parent: animationController, curve: Curves.easeInOut);
-        fadeAnimation = Tween(begin: 0.0, end: 1.0).animate(curve);
-        fadeMaskAnimation = Tween(begin: 1.0, end: 0.0).animate(curve);
+        animationController = AnimationController(duration: Duration(milliseconds:100), vsync: this);
+        animationController.addStatusListener((AnimationStatus status) {
+            
+            if (status == AnimationStatus.completed && widget.animationStage == 0) {
+                
+                setState(() {
+                    
+                    widget.animationStage = 1;
+                    
+                    animationController.duration = Duration(milliseconds: 300);
+                    CurvedAnimation curve = CurvedAnimation(parent: animationController, curve: Curves.easeInOut);
+                    fadeAnimation = Tween(begin: 0.0, end: 1.0).animate(curve);
+                    fadeMaskAnimation = Tween(begin: 1.0, end: 0.0).animate(curve);
+                    animationController.reset();
+                    animationController.forward();
+                });
+            }
+        });
+        
+        fadeAnimation = Tween(begin: 0.0, end: 0.0).animate(animationController);
+        fadeMaskAnimation = Tween(begin: 1.0, end: 1.0).animate(animationController);
     }
     
     @override
