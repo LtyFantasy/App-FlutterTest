@@ -71,6 +71,9 @@ class _ChallengeMainWidgetState extends State<_ChallengeMainWidget> {
 			child: challengeSelect
 		));
     	
+    	// 场景动画逻辑
+        // 1，prepare执行加载动画
+        // 2，prepare结束回调，清理掉prepare，在不重新渲染select的情况下，通知select开始执行动画
     	if (!widget.isPrepareDone) {
     		widgets.add(Container(
 				color: Color.fromARGB(255, 248, 248, 248),
@@ -83,6 +86,8 @@ class _ChallengeMainWidgetState extends State<_ChallengeMainWidget> {
 			));
 		}
     	
+    	// 之所以这里用Stack，是为了让select预先就加载好，prepare初始化只是覆盖在其上面
+        // 这么做的原因，是因为flutter_swiper这个第三方UI如果即时渲染加载，会出现一个跳动的问题
     	return Stack(children: widgets);
     }
 }

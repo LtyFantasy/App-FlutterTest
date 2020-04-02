@@ -36,19 +36,22 @@ class ChallengeSelect extends StatefulWidget {
 
 class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderStateMixin {
     
+    // 动画控制器
     AnimationController animationController;
+    // 顶部title和底部按钮的动画，alpha 从 0 到 1
     Animation<double> fadeAnimation;
-    Animation<double> fadeBarAnimation;
+    // 右侧小卡片和swiper下面的pageIndicator的遮罩动画，alpha从 1 到 0
+    Animation<double> fadeMaskAnimation;
     
     @override
     void initState() {
     
         super.initState();
         
-        animationController = AnimationController(duration: Duration(milliseconds:1200), vsync: this);
+        animationController = AnimationController(duration: Duration(milliseconds:300), vsync: this);
         CurvedAnimation curve = CurvedAnimation(parent: animationController, curve: Curves.easeInOut);
         fadeAnimation = Tween(begin: 0.0, end: 1.0).animate(curve);
-        fadeBarAnimation = Tween(begin: 1.0, end: 0.0).animate(curve);
+        fadeMaskAnimation = Tween(begin: 1.0, end: 0.0).animate(curve);
     }
     
     @override
@@ -99,7 +102,8 @@ class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderSt
                         }),
                     ],
                 ),
-                _createMaskBar(animation: fadeBarAnimation)
+                _createRightCardMask(animation: fadeMaskAnimation),
+                _createPageIndicatorMask(animation: fadeMaskAnimation),
             ],
         );
     }
@@ -154,15 +158,31 @@ Widget _createChooseButton({Animation animation, GestureTapCallback onTap}) {
     );
 }
 
-Widget _createMaskBar({Animation animation}) {
+Widget _createRightCardMask({Animation animation}) {
     
     Color color = Color.fromARGB(255, 248, 248, 248);
-    
     return Positioned(
         top: 0,
         right: 0,
         bottom: 100,
         width: 50,
+        child: FadeTransition(
+            opacity: animation,
+            child: Container(
+                color: color,
+            ),
+        )
+    );
+}
+
+Widget _createPageIndicatorMask({Animation animation}) {
+    
+    Color color = Color.fromARGB(255, 248, 248, 248);
+    return Positioned(
+        top: 440,
+        left: 0,
+        right: 0,
+        height: 30,
         child: FadeTransition(
             opacity: animation,
             child: Container(
