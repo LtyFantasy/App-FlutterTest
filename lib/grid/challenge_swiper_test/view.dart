@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter/grid/container_test/widgets/challenge_prepare.dart';
-import 'package:my_flutter/grid/container_test/widgets/challenge_select.dart';
+import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_prepare.dart';
+import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_select.dart';
 import 'dart:ui';
 
 import 'action.dart';

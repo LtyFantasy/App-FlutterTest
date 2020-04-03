@@ -1,6 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:my_flutter/grid/container_test/widgets/challenge_swiper.dart';
+import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_swiper.dart';
 
 class ContainerTestState implements Cloneable<ContainerTestState> {
   

@@ -5,19 +5,18 @@ import 'reducer.dart';
 import 'state.dart';
 import 'view.dart';
 
-class GridPage extends Page<GridState, Map<String, dynamic>> {
-  GridPage()
+class SectionListPage extends Page<SectionListState, Map<String, dynamic>> {
+  SectionListPage()
       : super(
             initState: initState,
             effect: buildEffect(),
             reducer: buildReducer(),
             view: buildView,
-            dependencies: Dependencies<GridState>(
+            dependencies: Dependencies<SectionListState>(
                 adapter: null,
-                slots: <String, Dependent<GridState>>{
+                slots: <String, Dependent<SectionListState>>{
                 }),
-            middleware: <Middleware<GridState>>[
-                logMiddleware(tag: "Grid MiddleWare")
+            middleware: <Middleware<SectionListState>>[
             ],);
 
 }

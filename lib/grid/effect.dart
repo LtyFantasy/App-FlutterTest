@@ -36,6 +36,10 @@ void _onGridTapped(Action action, Context<GridState> ctx) {
 
     Navigator.of(ctx.context).pushNamed(RoutePath.ContainerTest);
   }
+  else if (index == 3) {
+    
+    Navigator.of(ctx.context).pushNamed(RoutePath.SectionList);
+  }
   else {
 
       ArrowMessageAlert.show(

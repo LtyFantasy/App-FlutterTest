@@ -16,15 +16,13 @@ class Api {
     return instance;
   }
 
-  Api._internal() {
-
-  }
+  Api._internal();
 
   List<GridModel> getGridData() {
     return [
       GridModel(name: "ListTest"),
-      GridModel(name: "ContainerTest"),
-      GridModel(name: "第三块"),
+      GridModel(name: "ChallengeSwiperTest"),
+      GridModel(name: "SectionListTest"),
       GridModel(name: "第四块"),
       GridModel(name: "第五块"),
       GridModel(name: "第六块"),

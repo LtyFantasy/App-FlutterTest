@@ -2,7 +2,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-import 'package:my_flutter/grid/container_test/widgets/challenge_swiper.dart';
+import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_swiper.dart';
 
 class ChallengeSelect extends StatefulWidget {
     
