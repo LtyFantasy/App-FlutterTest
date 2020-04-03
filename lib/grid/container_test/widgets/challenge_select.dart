@@ -8,40 +8,21 @@ class ChallengeSelect extends StatefulWidget {
     
     /// 卡片数据源
     final List<ChallengeSwiperItem> challengeItems;
-    
     /// Choose点击事件
     final Function(int) chooseTapped;
     
-    /// 动画阶段
-    int animationStage;
-
-    /// state对象
-    _ChallengeSelectState state;
-
     ChallengeSelect({
         Key key,
         @required this.challengeItems,
         this.chooseTapped,
     }): assert(challengeItems != null, "[ChallengeSelect] challengeItems can't be null"),
-        super(key: key) {
-        
-        animationStage = 0;
-    }
-    
-    startAnimation() {
-        animationStage = 0;
-        state.startAnimation();
-    }
+        super(key: key);
     
     @override
-    State<StatefulWidget> createState() {
-        
-        state = _ChallengeSelectState();
-        return state;
-    }
+    State<StatefulWidget> createState() => ChallengeSelectState();
 }
 
-class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderStateMixin {
+class ChallengeSelectState extends State<ChallengeSelect> with TickerProviderStateMixin {
     
     // 动画控制器
     AnimationController animationController;
@@ -49,6 +30,9 @@ class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderSt
     Animation<double> fadeAnimation;
     // 右侧小卡片和swiper下面的pageIndicator的遮罩动画，alpha从 1 到 0
     Animation<double> fadeMaskAnimation;
+
+    // 动画阶段 0-Loading 1-Zoom
+    int animationStage = 0;
     
     @override
     void initState() {
@@ -58,11 +42,11 @@ class _ChallengeSelectState extends State<ChallengeSelect> with TickerProviderSt
         animationController = AnimationController(duration: Duration(milliseconds:100), vsync: this);
         animationController.addStatusListener((AnimationStatus status) {
             
-            if (status == AnimationStatus.completed && widget.animationStage == 0) {
+            if (status == AnimationStatus.completed && animationStage == 0) {
                 
                 setState(() {
                     
-                    widget.animationStage = 1;
+                    animationStage = 1;
                     
                     animationController.duration = Duration(milliseconds: 300);
                     CurvedAnimation curve = CurvedAnimation(parent: animationController, curve: Curves.easeInOut);

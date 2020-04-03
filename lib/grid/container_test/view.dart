@@ -59,16 +59,14 @@ class _ChallengeMainWidget extends StatefulWidget {
 
 class _ChallengeMainWidgetState extends State<_ChallengeMainWidget> {
 	
-	ChallengeSelect challengeSelect;
+	GlobalKey<ChallengeSelectState> selectStateKey = GlobalKey<ChallengeSelectState>();
     
     @override
     Widget build(BuildContext context) {
-	
-		challengeSelect = ChallengeSelect(challengeItems: widget.state.challengeItems);
-    	
+     
     	List<Widget> widgets = [];
     	widgets.add(Container(
-			child: challengeSelect
+			child: ChallengeSelect(key: selectStateKey, challengeItems: widget.state.challengeItems)
 		));
     	
     	// 场景动画逻辑
@@ -80,7 +78,7 @@ class _ChallengeMainWidgetState extends State<_ChallengeMainWidget> {
 				child: ChallengePrepare(loadingDoneCallback: () {
 					setState(() {
 						widget.isPrepareDone = true;
-						challengeSelect.startAnimation();
+                        selectStateKey.currentState.startAnimation();
 					});
 				})
 			));

@@ -17,6 +17,7 @@ class GridPage extends Page<GridState, Map<String, dynamic>> {
                 slots: <String, Dependent<GridState>>{
                 }),
             middleware: <Middleware<GridState>>[
+                logMiddleware(tag: "ssss")
             ],);
 
 }

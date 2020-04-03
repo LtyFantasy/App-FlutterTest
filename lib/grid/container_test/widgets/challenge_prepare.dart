@@ -9,8 +9,6 @@ class ChallengePrepare extends StatefulWidget  {
     
     /// Flare动画结束回调
     final Function() loadingDoneCallback;
-    /// 加载动画阶段，0-加载 1-放大
-    int _loadingAnimationStage = 0;
     
     ChallengePrepare({
        this.loadingDoneCallback
@@ -27,6 +25,9 @@ class _ChallengePrepareState extends State<ChallengePrepare> with TickerProvider
     // 动画设置
     AnimationController fadeController;
     Animation<double> fadeAnimation;
+
+    // 加载动画阶段，0-加载 1-放大
+    int loadingAnimationStage = 0;
     
     @override
     void initState() {
@@ -74,7 +75,7 @@ class _ChallengePrepareState extends State<ChallengePrepare> with TickerProvider
                     height: cardSize + 50,
                     child: FlareActor(
                         "asset/flare/WooPlusWhenIthemeLoading.flr",
-                        animation: widget._loadingAnimationStage == 0 ? "Loading" : "Zoom",
+                        animation: loadingAnimationStage == 0 ? "Loading" : "Zoom",
                         alignment: Alignment.topCenter,
                         sizeFromArtboard: true,
                         callback: (String name) {
@@ -83,7 +84,7 @@ class _ChallengePrepareState extends State<ChallengePrepare> with TickerProvider
                             if (name == "Loading") {
                                 fadeController.forward();
                                 setState(() {
-                                    widget._loadingAnimationStage = 1;
+                                    loadingAnimationStage = 1;
                                 });
                             }
                             else {

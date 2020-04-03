@@ -18,6 +18,7 @@ class ListTestPage extends Page<ListTestState, Map<String, dynamic>> {
                 slots: <String, Dependent<ListTestState>>{
                 }),
             middleware: <Middleware<ListTestState>>[
+            
             ],);
 
 }

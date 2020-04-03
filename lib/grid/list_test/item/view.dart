@@ -14,7 +14,7 @@ Widget buildView(ListTestItemState state, Dispatch dispatch, ViewService viewSer
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                   Container(
-                      padding: const EdgeInsets.only(right: 5),
+                      padding: const EdgeInsets.all(10),
                       child: Center(
                           child: Text(
                               typeString(state.type)
@@ -22,22 +22,25 @@ Widget buildView(ListTestItemState state, Dispatch dispatch, ViewService viewSer
                       ),
                   ),
                   Expanded(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                              Container(
-                                  height: 30,
-                                  child: Text(
-                                      state.title,
-                                      style: TextStyle(fontSize: 22),
+                      child: Container(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                  Container(
+                                      height: 30,
+                                      child: Text(
+                                          state.title,
+                                          style: TextStyle(fontSize: 22),
+                                      ),
                                   ),
-                              ),
-                              Text(
-                                  state.content,
-                                  style: TextStyle(fontSize: 16),
-                              )
-                          ],
+                                  Text(
+                                      state.content,
+                                      style: TextStyle(fontSize: 16),
+                                  )
+                              ],
+                          ),
                       ),
                   )
               ],
