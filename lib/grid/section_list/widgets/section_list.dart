@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 
 /// 分段ListView控件
 ///
+/// 本类实现方案参考自网络，但是原作者的方案有性能问题，因此重写并做了相关变动
+///
 /// 注意，使用[SectionList]时，一定要实现[SectionListDataSource]这个数据代理
 /// 本类的实现思想来自于iOS系统原生的UITableView
 ///
@@ -50,6 +52,12 @@ class _SectionListState extends State<SectionList> {
 	
 	// 滚动控制器，用来监听偏移变更事件
 	ScrollController scrollController;
+	// 当前偏移位置所在的section
+	int currentSection = -1;
+	// 当前所在section的header位置偏移
+	double currentSectionHeaderTopOffset;
+	
+	
 	// Section数据
 	List<_SectionModel> sectionModel;
 	// 所有Item个数
@@ -64,18 +72,43 @@ class _SectionListState extends State<SectionList> {
 	
 	@override
   Widget build(BuildContext context) {
+		
+		List<Widget> widgets = [
+			Container(
+				color: Colors.transparent,
+				child: _createListView(),
+			)
+		];
+		
+		if (currentSection >= 0) {
+			
+			_SectionModel model = sectionModel[currentSection];
+			if (model.headerHeight > 0 && model.headerWidget != null) {
+				// 添加一个顶部的Header悬挂
+				widgets.add(Positioned(
+					top: currentSectionHeaderTopOffset,
+					left: 0.0,
+					right: 0.0,
+					height: model.headerHeight,
+					child: Container(
+						child: model.headerWidget,
+					),
+				));
+			}
+		}
     
     return Container(
 			padding: EdgeInsets.all(0.0),
 			child: Stack(
-				children: <Widget>[
-					Container(
-						color: Colors.transparent,
-						child: _createListView(),
-					)
-				],
+				children: widgets,
 			),
 		);
+  }
+  
+  @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
   }
   
   // 数据初始化
@@ -133,12 +166,31 @@ class _SectionListState extends State<SectionList> {
 			
 			double offset = scrollController.offset;
 			if (offset <= 0) {
-				// TODO update header model
+				currentSection = -1;
 			}
 			else {
-				// 判断当前offet在哪个section区间
-				// TODO 然后设置section header偏移量，update
+				
+				// 判断当前顶部在哪个section区间
+				int section = _sectionWithOffset(scrollController.offset);
+				_SectionModel model = sectionModel[section];
+				double delta = model.endY - offset;
+				
+				double topOffset;
+				// section展示高度大于header，则header保持顶部悬挂
+				if (delta >= model.headerHeight) {
+					topOffset = 0;
+				}
+				// section展示高度小于header，则header往上缩
+				else {
+					topOffset = delta - model.headerHeight;
+				}
+				
+				currentSection = section;
+				currentSectionHeaderTopOffset = topOffset;
 			}
+			
+			// 开启更新
+			setState(() {});
 		});
 	}
 	
@@ -153,7 +205,7 @@ class _SectionListState extends State<SectionList> {
 			itemCount: totalItemCount,
 			itemBuilder: (BuildContext context, int index) {
 			
-				int section = sectionWithIndex(index);
+				int section = _sectionWithIndex(index);
 				assert(section != -1, "[SectionList] section == -1 should not happen,");
 				
 				// 映射index为所属section的row值
@@ -165,8 +217,10 @@ class _SectionListState extends State<SectionList> {
 				
 				// 判断是否是header item
 				if (row == 0 && model.headerHeight > 0) {
+					
 					itemHeight = model.headerHeight;
 					itemWidget = widget.dataSource.widgetForSectionHeader(section);
+					model.headerWidget = itemWidget;
 				}
 				// 是cell
 				else {
@@ -189,7 +243,7 @@ class _SectionListState extends State<SectionList> {
 	}
 	
 	// 转换ListView的Index为所属section
-	int sectionWithIndex(int index) {
+	int _sectionWithIndex(int index) {
 		
 		for (int section = 0; section < sectionModel.length; section++) {
 			_SectionModel model = sectionModel[section];
@@ -200,9 +254,25 @@ class _SectionListState extends State<SectionList> {
 		// 理论上来说，不存在会找不到的情况，如果真出现了，肯定属于哪里出问题了
 		return -1;
 	}
+	
+	// 根据ScrollController的偏移量，判断当前顶部位于哪个section
+	int _sectionWithOffset(double offset) {
+		
+		for (int section = 0; section < sectionModel.length; section++) {
+			_SectionModel model = sectionModel[section];
+			if (offset >= model.startY && offset < model.endY) {
+				return section;
+			}
+		}
+		
+		return -1;
+	}
 }
 
 /// SectionList的Section数据模型
+///
+/// 特别注意，[startIndex]和[endIndex]是前闭后开区间范围
+/// 即 startIndex <= x < endIndex，endIndex属于下一个section的startIndex
 class _SectionModel {
 	
 	// 整个section的起始偏移量
@@ -221,6 +291,10 @@ class _SectionModel {
 	
 	// 该section中有多少个item
 	int get itemCount => endIndex - startIndex;
+	
+	// 该Section的Header，用来设置偏移量，保证悬浮
+	// 注意，该值在itemBuilder期间才会被赋值
+	Widget headerWidget;
 	
 	_SectionModel({
 		this.startY,
