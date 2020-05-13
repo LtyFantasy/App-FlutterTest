@@ -76,17 +76,18 @@ class ReviewAvatarListState extends State<ReviewAvatarList> {
 			itemBuilder: _buildItem,
 		);
 		
+		// 以下多一个 10 ，是为了保证动画阻尼放大时，不被边界裁剪
 		// 如果时水平滚动，我们要给一个高度
 		if (widget.scrollDirection == Axis.horizontal) {
 			return Container(
-				height: widget.avatarSize,
+				height: widget.avatarSize + 10,
 				child: child,
 			);
 		}
 		// 如果是垂直滚动，我们要给一个宽度
 		else {
 			return Container(
-				width: widget.avatarSize,
+				width: widget.avatarSize + 10,
 				child: child,
 			);
 		}
@@ -206,7 +207,7 @@ class ReviewAvatarItem extends StatelessWidget {
 							width: size,
 							child: Container(
 								decoration: BoxDecoration(
-										color: Colors.deepOrange,
+										color: Colors.indigoAccent,
 										borderRadius: BorderRadius.all(Radius.circular(size/2.0)),
 										border: Border.all(
 											color: Colors.white,
@@ -232,10 +233,10 @@ class ReviewAvatarItem extends StatelessWidget {
 class InOutTransition extends AnimatedWidget {
 	
 	/// 位移动画曲线
-	static Cubic sizeCurve = Curves.fastLinearToSlowEaseIn;
+	static const Cubic sizeCurve = Curves.fastLinearToSlowEaseIn;
 	
 	/// 缩放动画曲线
-	static ElasticOutCurve scaleCurve = const ElasticOutCurve(0.5);
+	static const ElasticOutCurve scaleCurve = const ElasticOutCurve(0.5);
 	
 	/// 动画时间值监听
 	Animation<double> get animationFactor => listenable as Animation<double>;

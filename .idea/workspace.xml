@@ -5,68 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="185e79d7-8fb2-42de-9bae-54700064f6d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/animation/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/network_image/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/component.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module1/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/action.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/component.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/effect.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/module2/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/reducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grid/struct_test/view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/App-FlutterTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App-FlutterTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/challenge_swiper_test/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/challenge_swiper_test/view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/challenge_swiper_test/widgets/challenge_swiper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/challenge_swiper_test/widgets/challenge_swiper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/effect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/effect.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/list_test/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/list_test/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/route_path.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/route_path.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/in_out_animation/view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +24,29 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="9887a84831544e4f31" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="120" column="58" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1826">
+              <caret line="209" column="46" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,12 +54,108 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ViewPostIme</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/grid/in_out_animation/view.dart" />
+        <option value="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart" />
+        <option value="$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectId" id="1ZbSWsxmHS5Wd6Lw7dmmJkWkX6G" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="in_out_animation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="in_out_animation" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="list_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="list_test" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="struct_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App-FlutterTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App-FlutterTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="struct_test" type="462c0819:PsiDirectoryNode" />
+              <item name="module1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -148,12 +213,52 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info id="Build Variants" order="1" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.3297568" />
+      <window_info id="Resources Explorer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="8" />
+      <window_info anchor="bottom" id="Find" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.31847134" />
+      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Tail" order="8" />
+      <window_info anchor="bottom" id="Dart Analysis" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Flutter Inspector" order="2" weight="0.3297568" />
+      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Flutter Performance" order="5" weight="0.19098713" />
+      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -207,16 +312,6 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/grid/struct_test/module1/component.dart</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/grid/struct_test/module1/component.dart</url>
-          <line>32</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/grid/struct_test/module2/component.dart</url>
           <line>26</line>
           <option name="timeStamp" value="11" />
@@ -238,9 +333,193 @@
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
-        <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
-        <breakpoint type="dart-exception" />
+        <breakpoint enabled="true" type="CidrExceptionBreakpoint">
+          <properties />
+        </breakpoint>
+        <breakpoint type="dart-exception">
+          <properties />
+        </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/grid/section_list/effect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/store/reducer.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/store/state.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/store/store.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/list_test/item/effect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/list_test/item/reducer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/list_test/item/state.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/list_test/item/view.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/entrance/effect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/effect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/struct_test/module1/component.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/in_out_animation/view.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/painting/alignment.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="216" column="25" selection-start-line="216" selection-start-column="25" selection-end-line="216" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/material/colors.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="1235" column="35" selection-start-line="1235" selection-start-column="35" selection-end-line="1235" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/rendering/proxy_box.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="1085" column="15" selection-start-line="1085" selection-start-column="15" selection-end-line="1085" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/bin/cache/pkg/sky_engine/lib/ui/painting.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="984" column="2" selection-start-line="984" selection-start-column="2" selection-end-line="984" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/widgets/basic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="647" column="17" selection-start-line="647" selection-start-column="8" selection-end-line="647" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/animation/curves.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="546" column="21" selection-start-line="546" selection-start-column="21" selection-end-line="546" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/painting/box_decoration.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/DevEnv/flutter/packages/flutter/lib/src/widgets/container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="301" column="2" selection-start-line="301" selection-start-column="2" selection-end-line="301" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/in_out_animation/widgets/review_avatar_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="209" column="46" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/grid/in_out_animation/widgets/profile_review_widget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="120" column="58" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

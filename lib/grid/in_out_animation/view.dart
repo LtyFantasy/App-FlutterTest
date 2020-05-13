@@ -53,8 +53,6 @@ Widget buildView(InOutAnimationState state, Dispatch dispatch, ViewService viewS
                   ),
                   ProfileReviewWidget(
                     key: state.profileReviewKey,
-                    height: 130,
-                    width: 306,
                   )
                 ],
               ),
