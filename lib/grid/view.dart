@@ -29,7 +29,7 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
                 tapPosition = details.globalPosition;
               },
               onTap: (){
-                  dispatch(GridActionCreator.onGridTapped(index + 1, tapPosition));
+                  dispatch(GridActionCreator.onGridTapped(index, tapPosition));
               },
               child: Container(
                 width: 200,

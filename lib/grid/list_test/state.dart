@@ -5,8 +5,7 @@ import 'package:my_flutter/grid/list_test/item/state.dart';
 import 'package:my_flutter/store/state.dart';
 
 class ListTestState implements GlobalBaseState, Cloneable<ListTestState> {
-
-  int index;
+  
   List<ListTestItemState> itemDatas;
   
   @override
@@ -15,13 +14,11 @@ class ListTestState implements GlobalBaseState, Cloneable<ListTestState> {
   @override
   ListTestState clone() {
       return ListTestState()
-          ..index = index
           ..itemDatas = itemDatas
           ..themeColor = themeColor;
   }
 }
 
 ListTestState initState(Map<String, dynamic> args) {
-  return ListTestState()
-          ..index = args["index"];
+  return ListTestState();
 }

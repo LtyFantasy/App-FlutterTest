@@ -1,10 +1,13 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Page;
 import 'package:my_flutter/entrance/page.dart';
 import 'package:my_flutter/grid/challenge_swiper_test/page.dart';
+import 'package:my_flutter/grid/in_out_animation/page.dart';
 import 'package:my_flutter/grid/list_test/page.dart';
+import 'package:my_flutter/grid/network_image/page.dart';
 import 'package:my_flutter/grid/page.dart';
 import 'package:my_flutter/grid/section_list/page.dart';
+import 'package:my_flutter/grid/struct_test/page.dart';
 import 'package:my_flutter/route_path.dart';
 import 'package:my_flutter/store/state.dart';
 import 'package:my_flutter/store/store.dart';
@@ -19,6 +22,9 @@ Widget createApp() {
         RoutePath.ListTest: ListTestPage(),
         RoutePath.ContainerTest: ContainerTestPage(),
         RoutePath.SectionList: SectionListPage(),
+        RoutePath.NetworkImageTest: NetworkImageTestPage(),
+        RoutePath.StructTest: StructTestPage(),
+        RoutePath.InOutAnimation: InOutAnimationPage()
       },
       
       visitor: (String path, Page<Object, dynamic> page) {

@@ -4,7 +4,6 @@ import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_prepare.
 import 'package:my_flutter/grid/challenge_swiper_test/widgets/challenge_select.dart';
 import 'dart:ui';
 
-import 'action.dart';
 import 'state.dart';
 
 Widget buildView(ContainerTestState state, Dispatch dispatch, ViewService viewService) {
