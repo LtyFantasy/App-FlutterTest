@@ -10,4 +10,5 @@ class RoutePath {
   static const String NetworkImageTest = "NetworkImageTest";
   static const String StructTest = "StructTest";
   static const String InOutAnimation = "InOutAnimation";
+  static const String SearchAnimation = "SearchAnimation";
 }

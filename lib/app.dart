@@ -6,6 +6,7 @@ import 'package:my_flutter/grid/in_out_animation/page.dart';
 import 'package:my_flutter/grid/list_test/page.dart';
 import 'package:my_flutter/grid/network_image/page.dart';
 import 'package:my_flutter/grid/page.dart';
+import 'package:my_flutter/grid/search_animation/page.dart';
 import 'package:my_flutter/grid/section_list/page.dart';
 import 'package:my_flutter/grid/struct_test/page.dart';
 import 'package:my_flutter/route_path.dart';
@@ -24,7 +25,8 @@ Widget createApp() {
         RoutePath.SectionList: SectionListPage(),
         RoutePath.NetworkImageTest: NetworkImageTestPage(),
         RoutePath.StructTest: StructTestPage(),
-        RoutePath.InOutAnimation: InOutAnimationPage()
+        RoutePath.InOutAnimation: InOutAnimationPage(),
+        RoutePath.SearchAnimation: SearchAnimationPage(),
       },
       
       visitor: (String path, Page<Object, dynamic> page) {

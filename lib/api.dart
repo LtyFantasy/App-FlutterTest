@@ -20,6 +20,7 @@ class Api {
 
   Api._internal();
 
+  
   List<GridModel> getGridData() {
     return [
       
@@ -42,6 +43,10 @@ class Api {
       
       GridModel(name: "InOutAnimation", event: (BuildContext context, Object argument){
         Navigator.of(context).pushNamed(RoutePath.InOutAnimation);
+      }),
+  
+      GridModel(name: "SearchAnimation", event: (BuildContext context, Object argument){
+        Navigator.of(context).pushNamed(RoutePath.SearchAnimation);
       }),
       
       GridModel(name: "第七块"),
