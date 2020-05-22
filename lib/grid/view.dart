@@ -23,8 +23,7 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
         return Center(
           child: Card(
             color: Colors.lightBlueAccent,
-            child: InkWell(
-              splashColor: Colors.blue.withAlpha(100),
+            child: GestureDetector(
               onTapDown: (TapDownDetails details) {
                 tapPosition = details.globalPosition;
               },

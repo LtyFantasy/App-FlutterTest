@@ -26,14 +26,11 @@ class SearchPhoto extends StatelessWidget {
 	@override
   Widget build(BuildContext context) {
 		
-		/*
 		Widget clipPhoto = ClipRRect(
 			clipBehavior: Clip.hardEdge,
 			borderRadius: BorderRadius.all(Radius.circular(size / 2.0)),
-			child: Image.asset(sourcePath, fit: BoxFit.fill),
+			child: Image.asset(sourcePath, fit: BoxFit.contain),
 		);
-		 */
-		Widget clipPhoto = Image.asset(sourcePath, fit: BoxFit.contain);
 		
 		if (showBorder) {
 			return Container(
