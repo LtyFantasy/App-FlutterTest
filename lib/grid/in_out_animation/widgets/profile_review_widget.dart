@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_flutter/grid/in_out_animation/widgets/review_avatar_list.dart';
+import 'package:my_flutter/tools/ui_screen.dart';
 
 class ProfileReviewWidget extends StatefulWidget {
 	
@@ -17,17 +18,17 @@ class ProfileReviewWidget extends StatefulWidget {
 
 class ProfileReviewWidgetState extends State<ProfileReviewWidget> {
 	
-	static const double height = 130.0;
-	static const double width = 306.0;
+	static double height = dp(130);
+	static double width = dp(306);
 	
 	/// 中间间距
 	static const double _midPadding = 6.0;
 	
 	/// 卡片宽度
-	static const double _cardWidth = (width - _midPadding) / 2.0;
+	static double _cardWidth = (width - _midPadding) / 2.0;
 	
 	/// 卡片高度
-	static const double _cardHeight = height;
+	static double _cardHeight = height;
 	
 	/// Out卡片
 	Widget _out;
@@ -96,11 +97,11 @@ class ProfileReviewWidgetState extends State<ProfileReviewWidget> {
 		return RepaintBoundary(
 			child: ClipRRect(
 				clipBehavior: Clip.hardEdge,
-				borderRadius: const BorderRadius.only(
-					topLeft: const Radius.circular(_cardHeight / 2.0),
-					bottomLeft: const Radius.circular(_cardHeight / 2.0),
-					topRight: const Radius.circular(10.0),
-					bottomRight: const Radius.circular(10.0),
+				borderRadius: BorderRadius.only(
+					topLeft: Radius.circular(_cardHeight / 2.0),
+					bottomLeft: Radius.circular(_cardHeight / 2.0),
+					topRight: Radius.circular(dp(10)),
+					bottomRight: Radius.circular(dp(10)),
 				),
 				child: Container(
 						alignment: Alignment.topRight,
@@ -114,15 +115,15 @@ class ProfileReviewWidgetState extends State<ProfileReviewWidget> {
 							crossAxisAlignment: CrossAxisAlignment.end,
 							children: <Widget>[
 								Container(
-									margin: const EdgeInsets.only(top: 10.0, right: 15.0),
+									margin: EdgeInsets.only(top: dp(10), right: dp(15)),
 									child: const Text("OUT", style: textStyle),
 								),
 								Container(
-									margin: const EdgeInsets.only(right: 5.0, bottom: 10.0),
+									margin: EdgeInsets.only(right: dp(5), bottom: dp(10)),
 									child: ReviewAvatarList(
 										key: _outListKey,
-										avatarSize: 44.0,
-										avatarPadding: EdgeInsets.only(right: 10.0),
+										avatarSize: dp(44),
+										avatarPadding: EdgeInsets.only(right: dp(10)),
 										reverse: true,
 									),
 								)
@@ -138,11 +139,11 @@ class ProfileReviewWidgetState extends State<ProfileReviewWidget> {
 		return RepaintBoundary(
 			child: ClipRRect(
 				clipBehavior: Clip.hardEdge,
-				borderRadius: const BorderRadius.only(
-					topLeft: const Radius.circular(10.0),
-					bottomLeft: const Radius.circular(10.0),
-					topRight: const Radius.circular(_cardHeight / 2.0),
-					bottomRight: const Radius.circular(_cardHeight / 2.0),
+				borderRadius: BorderRadius.only(
+					topLeft: Radius.circular(dp(10)),
+					bottomLeft: Radius.circular(dp(10)),
+					topRight: Radius.circular(_cardHeight / 2.0),
+					bottomRight: Radius.circular(_cardHeight / 2.0),
 				),
 				child: Container(
 					alignment: Alignment.topLeft,
@@ -156,15 +157,15 @@ class ProfileReviewWidgetState extends State<ProfileReviewWidget> {
 						crossAxisAlignment: CrossAxisAlignment.start,
 						children: <Widget>[
 							Container(
-								margin: const EdgeInsets.only(top: 10.0, left: 20.0),
+								margin: EdgeInsets.only(top: dp(10), left: dp(20)),
 								child: const Text("IN", style: textStyle),
 							),
 							Container(
-								margin: const EdgeInsets.only(left: 5.0, bottom: 10.0),
+								margin: EdgeInsets.only(left: dp(5), bottom: dp(10)),
 								child: ReviewAvatarList(
 									key: _inListKey,
-									avatarSize: 44.0,
-									avatarPadding: EdgeInsets.only(left: 10.0),
+									avatarSize: dp(44),
+									avatarPadding: EdgeInsets.only(left: dp(10)),
 									reverse: false,
 								),
 							)

@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter/grid/search_animation/widgets/shift_opacity_transition.dart';
+import 'package:my_flutter/tools/ui_screen.dart';
 
 class SearchInfoWidget extends StatefulWidget {
   
@@ -34,6 +35,12 @@ class SearchInfoWidget extends StatefulWidget {
 class SearchInfoWidgetState
     extends State<SearchInfoWidget> with TickerProviderStateMixin {
   
+  /// 文案的左边距
+  static double _textLeftMargin = dp(45);
+  
+  /// 按钮的左右边距
+  static double _buttonLRMargin = dp(45);
+  
   /// People动画控制器
   AnimationController _peopleController;
   /// People动画
@@ -49,6 +56,11 @@ class SearchInfoWidgetState
   /// PriceDesc动画
   Animation<double> _priceDescAnimation;
   
+  /// 按钮动画控制器
+  AnimationController _buttonController;
+  /// 按钮动画
+  Animation<double> _buttonAnimation;
+  
   @override
   void initState() {
     super.initState();
@@ -61,29 +73,37 @@ class SearchInfoWidgetState
     _peopleController.dispose();
     _priceController.dispose();
     _priceDescController.dispose();
+    _buttonController.dispose();
     super.dispose();
   }
   
   @override
   Widget build(BuildContext context) {
     
-    
-    List<Widget> children = [];
-    
-    // 有多少人在你周围
-    children.add(_createPeopleAroundText(widget.peoples));
-    // 价格
-    children.add(_createPriceText(widget.originPrice, widget.discountPrice));
-    // 价格描述
-    children.add(_createPriceDesc(14.99, 9.99));
-    
     return Container(
-      //height: 280,
       child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: children,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              //alignment: Alignment.center,
+              margin: EdgeInsets.only(top: dp(20)),
+              child: Column(
+                children: <Widget>[
+                  // 有多少人在你周围
+                  _createPeopleAroundText(widget.peoples),
+                  // 价格
+                  _createPriceText(widget.originPrice, widget.discountPrice),
+                  // 价格描述
+                  _createPriceDesc(widget.originPrice, widget.discountPrice),
+                ],
+              ),
+            ),
+          ),
+          // 底部按钮
+          _createButton("Start Dating Now!", widget.onTap)
+        ],
       ),
     );
   }
@@ -100,14 +120,19 @@ class SearchInfoWidgetState
     Future.delayed(Duration(milliseconds: 400), () {
       _priceDescController.forward();
     });
+    Future.delayed(Duration(milliseconds: 600), () {
+      _buttonController.forward();
+    });
   }
   
   /// 动画设置 - 初始化
   void _initAnimation() {
+    
+    Duration duration = const Duration(milliseconds: 1000);
   
     // --------------- People动画 ---------------
     _peopleController = AnimationController(
-        duration: const Duration(milliseconds: 1000),
+        duration: duration,
         vsync: this
     );
     
@@ -120,7 +145,7 @@ class SearchInfoWidgetState
     
     // --------------- Price动画 ---------------
     _priceController = AnimationController(
-      duration: const Duration(milliseconds: 1000),
+      duration: duration,
       vsync: this
     );
     
@@ -133,7 +158,7 @@ class SearchInfoWidgetState
 
     // --------------- PriceDesc动画 ---------------
     _priceDescController = AnimationController(
-        duration: const Duration(milliseconds: 1000),
+        duration: duration,
         vsync: this
     );
 
@@ -143,6 +168,19 @@ class SearchInfoWidgetState
     );
 
     _priceDescAnimation = Tween(begin: 0.0, end: 1.0).animate(priceDescCurve);
+
+    // --------------- PriceDesc动画 ---------------
+    _buttonController = AnimationController(
+        duration: duration,
+        vsync: this
+    );
+
+    CurvedAnimation buttonCurve = CurvedAnimation(
+        parent: _priceDescController,
+        curve: Curves.easeInOut
+    );
+
+    _buttonAnimation = Tween(begin: 0.0, end: 1.0).animate(buttonCurve);
   }
   
   /// 创建你周围有XXX人文案
@@ -151,14 +189,14 @@ class SearchInfoWidgetState
     return ShiftOpacityTransition(
       animation: _peopleAnimation,
       insetsMaker: (double value) {
-        return EdgeInsets.only(top:100 * (1 - value));
+        return EdgeInsets.only(top:dp(20) + dp(30) * (1 - value), left: _textLeftMargin);
       },
       child: Text(
         "There are $num women\naround meet your criteria",
-        style: const TextStyle(
+        style: TextStyle(
             fontWeight: FontWeight.w600,
             color: Color(0xffffffff),
-            fontSize: 24),
+            fontSize: dp(24)),
       ),
     );
   }
@@ -166,17 +204,17 @@ class SearchInfoWidgetState
   /// 创建折扣价格文案
   Widget _createPriceText(double origin, double discount) {
   
-    TextStyle priceStyle = const TextStyle(
+    TextStyle priceStyle = TextStyle(
         fontWeight: FontWeight.w600,
         color: Color(0xffffffff),
-        fontSize: 36
+        fontSize: dp(40)
     );
     
     int percent = ((1.0 - discount / origin) * 100.0).toInt();
     return ShiftOpacityTransition(
       animation: _priceAnimation,
       insetsMaker: (double value) {
-        return EdgeInsets.only(top: 5 + 100 * (1 - value));
+        return EdgeInsets.only(top: dp(5) + dp(20) * (1 - value), left: _textLeftMargin);
       },
       child: RichText(
         text: TextSpan(
@@ -205,15 +243,45 @@ class SearchInfoWidgetState
     return ShiftOpacityTransition(
       animation: _priceDescAnimation,
       insetsMaker: (double value) {
-        return EdgeInsets.only(top: 5 + 100 * (1 - value),);
+        return EdgeInsets.only(top: dp(5) + dp(10) * (1 - value), left: _textLeftMargin);
       },
       child: Text(
         "\$$discount for the first moneth, then \$$origin per month",
-        style: const TextStyle(
+        style: TextStyle(
             color: Color(0xffffffff),
-            fontSize: 12
+            fontSize: dp(12)
         ),
       ),
+    );
+  }
+  
+  /// 创建按钮
+  Widget _createButton(String text, VoidCallback onTap) {
+    
+    return ShiftOpacityTransition(
+        animation: _buttonAnimation,
+        insetsMaker: (double value) {
+          return EdgeInsets.only(bottom: dp(20) * value);
+        },
+        child: GestureDetector(
+          onTap: onTap,
+          child: Container(
+            height: dp(55),
+            alignment: Alignment.center,
+            margin: EdgeInsets.only(left: _buttonLRMargin, right: _buttonLRMargin),
+            decoration: BoxDecoration(
+              color: Colors.deepOrange,
+              borderRadius: BorderRadius.all(Radius.circular(dp(55) / 2.0)),
+            ),
+            child: Text(
+              text ?? "",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: dp(14),
+              ),
+            ),
+          ),
+        ),
     );
   }
 }

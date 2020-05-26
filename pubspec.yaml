@@ -34,6 +34,8 @@ dependencies:
   cached_network_image: 2.0.0
   flutter_advanced_networkimage: ^0.7.0
 
+  permission_handler: ^5.0.0+hotfix.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -4,9 +4,10 @@ import 'state.dart';
 
 Effect<SearchAnimationState> buildEffect() {
   return combineEffects(<Object, Effect<SearchAnimationState>>{
-    SearchAnimationAction.action: _onAction,
+    Lifecycle.initState: _onInit
   });
 }
 
-void _onAction(Action action, Context<SearchAnimationState> ctx) {
+void _onInit(Action action, Context<SearchAnimationState> ctx) async {
+
 }

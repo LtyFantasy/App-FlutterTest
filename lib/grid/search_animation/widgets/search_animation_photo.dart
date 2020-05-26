@@ -44,6 +44,11 @@ class SearchAnimationPhotoState
 	AnimationController _controllerBounce;
 	Animation<double> _bounceAnimation;
 	
+	/// 动画类型标记
+	///
+	/// true-正常的连贯动画 false-无权限时的中途暂停动画
+	bool _isNormal = true;
+	
 	/// 弹动次数
 	final int _bounceTimes = 2;
 	int _bounceCount = 0;
@@ -84,9 +89,23 @@ class SearchAnimationPhotoState
   }
   
   /// 开启动画
-	void startAnimation() {
+	void startAnimation({bool isNormal = true}) {
 		_bounceCount = 0;
+		_isNormal = isNormal;
 		_controllerScale.forward();
+	}
+	
+	/// 继续动画
+	///
+	/// 适用于startAnimation时，isNormal=false的对象
+	void resumeAnimation() {
+		
+		if (widget.isMainPhoto) {
+			if (mounted) _controllerBounce.forward();
+		}
+		else {
+			if (mounted) _controllerScale.reverse();
+		}
 	}
   
   /// 缩放动画初始化
@@ -97,23 +116,9 @@ class SearchAnimationPhotoState
 				vsync: this
 		)..addStatusListener((AnimationStatus status) {
 			
-			if (status == AnimationStatus.completed) {
-				
-				// 主要头像才有二段动画
-				if (widget.isMainPhoto) {
-					Future.delayed(Duration(milliseconds: 600), () {
-						if (mounted) _controllerBounce.forward();
-					});
-				}
-				// 其它头像，展示一会就自动消失
-				else {
-					Future.delayed(Duration(milliseconds: 1000), () {
-						if (mounted) _controllerScale.reverse();
-					});
-				}
-			}
-			else if (status == AnimationStatus.dismissed) {
-			
+			// 有权限时的动画状态处理逻辑
+			if (_isNormal) {
+				_normalStatusHandler(status);
 			}
 		});
 	
@@ -161,5 +166,25 @@ class SearchAnimationPhotoState
 		);
 		
 		_bounceAnimation = Tween<double>(begin: 1.0, end: 0.9).animate(curve);
+	}
+	
+	/// 有权限时，进行正常的全套动画
+	void _normalStatusHandler(AnimationStatus status) {
+		
+		if (status == AnimationStatus.completed) {
+			
+			// 主要头像才有二段动画
+			if (widget.isMainPhoto) {
+				Future.delayed(Duration(milliseconds: 600), () {
+					if (mounted) _controllerBounce.forward();
+				});
+			}
+			// 其它头像，展示一会就自动消失
+			else {
+				Future.delayed(Duration(milliseconds: 1000), () {
+					if (mounted) _controllerScale.reverse();
+				});
+			}
+		}
 	}
 }

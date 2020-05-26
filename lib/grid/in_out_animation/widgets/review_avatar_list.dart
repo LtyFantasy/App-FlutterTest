@@ -2,6 +2,7 @@
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter/tools/ui_screen.dart';
 
 /// 用户逼单 Review投票头像List控件
 ///
@@ -80,14 +81,14 @@ class ReviewAvatarListState extends State<ReviewAvatarList> {
 		// 如果时水平滚动，我们要给一个高度
 		if (widget.scrollDirection == Axis.horizontal) {
 			return Container(
-				height: widget.avatarSize + 10,
+				height: widget.avatarSize + dp(10),
 				child: child,
 			);
 		}
 		// 如果是垂直滚动，我们要给一个宽度
 		else {
 			return Container(
-				width: widget.avatarSize + 10,
+				width: widget.avatarSize + dp(10),
 				child: child,
 			);
 		}
@@ -156,7 +157,7 @@ class ReviewAvatarModel {
 	/// 获取对应的控件
 	Widget get widget {
 		return (sourcePath != null && sourcePath.length > 0)
-				? Text(sourcePath) // TODO 待替换成图片控件
+				? Image.asset(sourcePath, fit: BoxFit.contain)
 				: Container();
 	}
 	
@@ -207,7 +208,6 @@ class ReviewAvatarItem extends StatelessWidget {
 							width: size,
 							child: Container(
 								decoration: BoxDecoration(
-										color: Colors.indigoAccent,
 										borderRadius: BorderRadius.all(Radius.circular(size/2.0)),
 										border: Border.all(
 											color: Colors.white,
@@ -215,7 +215,9 @@ class ReviewAvatarItem extends StatelessWidget {
 										)
 								),
 								child: Center(
-									child: model.widget,
+									child: ClipOval(
+										child: model.widget,
+									)
 								),
 							),
 						),

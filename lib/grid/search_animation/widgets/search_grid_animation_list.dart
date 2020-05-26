@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter/grid/search_animation/widgets/search_photo.dart';
 import 'package:my_flutter/grid/search_animation/widgets/shift_opacity_transition.dart';
+import 'package:my_flutter/tools/ui_screen.dart';
 
 class SearchGridAnimationList extends StatefulWidget {
 	
@@ -74,18 +75,18 @@ class SearchGridAnimationListState
     return ShiftOpacityTransition(
 			animation: _animation,
 			insetsMaker: (double value) {
-				return EdgeInsets.only(left: 200 * (1 - value));
+				return EdgeInsets.only(left: dp(200) * (1 - value));
 			},
 			child: GridView.builder(
 				controller: _scrollController,
 				scrollDirection: Axis.horizontal,
-				padding: const EdgeInsets.only(left: 20),
+				padding: EdgeInsets.only(left: dp(20)),
 				physics: NeverScrollableScrollPhysics(),
-				gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-					maxCrossAxisExtent: 90,
+				gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+					maxCrossAxisExtent: dp(90),
 					childAspectRatio: 1,
-					mainAxisSpacing: 15,
-					crossAxisSpacing: 20,
+					mainAxisSpacing: dp(20),
+					crossAxisSpacing: dp(20),
 				),
 				itemBuilder: (BuildContext context, int index) {
 					
@@ -93,7 +94,7 @@ class SearchGridAnimationListState
 					index = index % _randomPhotos.length;
 					return SearchPhoto(
 						sourcePath: _randomPhotos[index],
-						size: 90,
+						size: dp(90),
 					);
 				},
 			),

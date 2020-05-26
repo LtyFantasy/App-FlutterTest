@@ -41,5 +41,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your location will be used for recommending more singles nearby to you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location will be used for recommending more singles nearby to you.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Your location will be used for recommending more singles nearby to you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Your location will be used for recommending more singles nearby to you.</string>
 </dict>
 </plist>

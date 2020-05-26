@@ -1,6 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart' hide Action;
 import 'package:flutter/widgets.dart' hide Action;
+import 'package:my_flutter/api.dart';
 import 'package:my_flutter/common_widget/arrow_message_alert.dart';
 import 'package:my_flutter/model.dart';
 import 'package:my_flutter/route_path.dart';
@@ -20,7 +21,8 @@ void _onAction(Action action, Context<GridState> ctx) {
 }
 
 void _onInit(Action action, Context<GridState> ctx) {
-  ctx.dispatch(GridActionCreator.onLoadData());
+  
+  ctx.state.models = Api().getGridData();
 }
 
 void _onGridTapped(Action action, Context<GridState> ctx) {

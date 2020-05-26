@@ -12,22 +12,32 @@ class ShiftOpacityTransition extends AnimatedWidget {
   
   /// 边距插值器
   final EdgeInsets Function(double animationValue) insetsMaker;
+
+  /// 曲线
+  final Cubic curve;
+  
+  /// 位置
+  final AlignmentGeometry alignment;
   
   const ShiftOpacityTransition({
     Key key,
     @required Animation<double> animation,
+    @required this.child,
     @required this.insetsMaker,
-    this.child
+    this.curve = Curves.easeInOut,
+    this.alignment = Alignment.topLeft,
   }) : assert(animation != null),
         super(key: key, listenable: animation);
   
   @override
   Widget build(BuildContext context) {
     
+    double value = curve.transformInternal(animationFactor.value);
     return Container(
-      margin: insetsMaker(animationFactor.value),
+      alignment: alignment,
+      margin: insetsMaker(value),
       child: Opacity(
-        opacity: animationFactor.value,
+        opacity: value,
         child: child,
       ),
     );
